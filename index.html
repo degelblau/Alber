@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alber Solutions – Coming Soon</title>
+  <meta name="description" content="Die Website von Alber Solutions befindet sich derzeit im Aufbau. Schau bald wieder vorbei!" />
+  <link rel="icon" href="alber-03.png" type="image/x-icon" />
+  <meta property="og:image" content="alber-02.png" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="heartCanvas"></canvas>
+  <div class="text-overlay">
+    <h1><span class="typed-text"></span><span class="cursor">|</span></h1>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    const text = "Hier entsteht bald etwas... cooles!";
+    const typedText = document.querySelector(".typed-text");
+    const cursor = document.querySelector(".cursor");
+    let index = 0;
+
+    function typeLetter() {
+      if (index < text.length) {
+        typedText.textContent += text.charAt(index);
+        index++;
+        setTimeout(typeLetter, 100);
+      }
+    }
+
+    typeLetter();
+
+    // Blinking cursor
+    setInterval(() => {
+      cursor.style.opacity = cursor.style.opacity === "0" ? "1" : "0";
+    }, 500);
+  </script>
+</body>
+</html>

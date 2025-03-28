@@ -1,0 +1,40 @@
+@font-face {
+    font-family: 'FunnelDisplayExtraBold';
+    src: url('fonts/FunnelDisplay-ExtraBold.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: black;
+    overflow: hidden;
+    font-family: 'FunnelDisplayExtraBold', monospace;
+
+  }
+  
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 0;
+  }
+  
+  .text-overlay {
+    position: absolute;
+    bottom: 5%;
+    width: 100%;
+    text-align: center;
+    font-size: 1.8rem;
+    color: white;
+    text-shadow: 0 0 15px #ffffff;
+    z-index: 1;
+  }
+  h1 {
+    font-family: 'FunnelDisplayExtraBold', monospace;
+    font-size: 3rem;
+    text-shadow: 0 0 100px white;
+    transition: text-shadow 0.5s ease;
+  }
